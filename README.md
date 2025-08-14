@@ -25,7 +25,7 @@ Users should be able to:
 
 ## Links
 
-- Live Site URL: [Add live site URL here](https://mhmd-aho.github.io/ticket-generator)
+- Live Site URL: (https://mhmd-aho.github.io/ticket-generator)
 
 
 ## Built with
