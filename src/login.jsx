@@ -71,7 +71,18 @@ const handleSubmit = (e) => {
                                 </div>
                             </div>):
                             (
-                        <label htmlFor='avatar' className="flex flex-col justify-center items-center border-dashed border border-neutral-500 w-full sm:h-20 h-30 rounded-xl bg-neutral-500/10 backdrop-blur-xs hover:bg-neutral-500/30 hover:cursor-pointer focus:ring-2 focus:ring-neutral-300 outline-none  duration-200 " >
+                        <label htmlFor='avatar'
+                        onDragOver={e=>e.preventDefault()}
+                        onDrop={e=>{
+                            e.preventDefault();
+                            const file = e.dataTransfer.files[0];
+                            if(file){
+                                const reader = new FileReader();
+                                reader.onloadend = () => setFile(reader.result);
+                                reader.readAsDataURL(file);
+                            }
+                        }}
+                          className="flex flex-col justify-center items-center border-dashed border border-neutral-500 w-full sm:h-20 h-30 rounded-xl bg-neutral-500/10 backdrop-blur-xs hover:bg-neutral-500/30 hover:cursor-pointer focus:ring-2 focus:ring-neutral-300 outline-none  duration-200 " >
                             <div className='bg-neutral-500/10 backdrop-blur-xs h-8 w-8 rounded-lg flex justify-center items-center'>
                                 <img className='w-6 h-6' src={uploadIcon}/>
                             </div>

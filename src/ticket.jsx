@@ -14,7 +14,7 @@ export default function Ticket(props){
                     <img src={ticket}/>
                 </div>
                 <div className='col-start-1 row-start-1 w-full h-full flex justify-between'>
-                <div className='w-3/4 h-full flex flex-col justify-between items-center sm:p-4  p-1'>
+                <div className='w-3/4 h-full flex flex-col justify-between items-center sm:p-4  p-2'>
                     <div className='flex flex-col justify-start items-baseline gap-1 w-full'>
                         <img src={logo} className=' w-2/3'/>
                         <p className='font-in text-neutral-300 sm:text-sm text-[10px] pl-9'>jan 31, 2025 / Austin, TX</p> 
